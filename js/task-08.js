@@ -1,16 +1,16 @@
 const form = document.querySelector(".login-form")
-form.addEventListener("submit", handSubmit)
+form.addEventListener("submit", handleSubmit)
 function handleSubmit(event) {
     event.preventDefault()
     const {
-        elements: { email, passvord }
+        elements: { email, password }
     } = event.currentTarget
-    if (email.value === "" || passvord.value === "") {
+    if (email.value === "" || password.value === "") {
         return alert("Заповни всі поля!")
     }
     const userInfo = {
         email: email.value,
-        passvord: passvord.value,
+        password: password.value,
     }
     console.log(userInfo)
     event.currentTarget.reset()
